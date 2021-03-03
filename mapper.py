@@ -8,6 +8,7 @@ def printOutput(row, col, values):
     value = ",".join(values)
     print("{}\t{}".format(key, value))
 
+
 # Diccionario para guardar las matrices
 matrixDictionary = dict()
 # Diccionario para guardar las dimensiones de las matrices
@@ -50,12 +51,7 @@ for key in matrixDictionary:
 if len(parsedMatrixDictionary) != 2:
     raise Exception("Only too matrix are needed")
 
-result = []
 for i in range(len(parsedMatrixDictionary[0])):
     for j in range(len(parsedMatrixDictionary[1])):
-        result = []
         for k in range(len(parsedMatrixDictionary[1])):
-            result.append(str(parsedMatrixDictionary[0][i][k]))
-            result.append(str(parsedMatrixDictionary[1][k][j]))
-        printOutput(str(i), str(j), result)
-
+            printOutput(str(i), str(j), [str(parsedMatrixDictionary[0][i][k]), str(parsedMatrixDictionary[1][k][j])])
