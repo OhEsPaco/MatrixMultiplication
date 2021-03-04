@@ -49,7 +49,7 @@ for key in matrixDictionary:
     index += 1
 
 if len(parsedMatrixDictionary) != 2:
-    raise Exception("Only too matrix are needed")
+    raise Exception("Only two matrixes are needed")
 
 for i in range(len(parsedMatrixDictionary[0])):
     for j in range(len(parsedMatrixDictionary[1])):
